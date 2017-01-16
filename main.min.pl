@@ -1,0 +1,1 @@
+my(%f,@s,$r,$c,%a);@s=("#")x3;while(<>){chomp;foreach(split/ /){shift@s;$f{join("#",@s)}{$_}++;$a{join("#",@s)}++;push@s,$_;}}@s=("#")x3;for(my$i=0;$i<=1000;$i++){shift@s;$r=rand;$c=0.0;foreach(keys%{$f{join("#",@s)}}){if($c+$f{join("#",@s)}{$_}/$a{join("#",@s)}>=$r){print$_," ";push@s,$_;last;}$c+=$f{join("#",@s)}{$_}/$a{join("#",@s)};}}
